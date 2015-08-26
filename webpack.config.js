@@ -12,7 +12,7 @@ var path = require('path');
 
 module.exports = {
     entry: [
-        "bootstrap-webpack!./app/config/bootstrap.config.js",
+        //"bootstrap-webpack!./app/config/bootstrap.config.js",
         "./app/app.js"
     ],
     output: {
