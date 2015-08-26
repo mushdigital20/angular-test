@@ -1,0 +1,8 @@
+node_modules
+components
+_app
+_releases
+*.log
+keys
+build
+target

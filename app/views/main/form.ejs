@@ -1,0 +1,41 @@
+<div class="vertical-container">
+	<div class="vertical-center row">
+		<div class="col-md-6 col-md-offset-3">
+			<form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+			  <div class="form-group has-feedback" ng-class="{'has-error':userForm.firstName.$touched && userForm.firstName.$invalid}">
+			    <label class="control-label" for="firstName">First name</label>
+			    <input type="text" class="form-control" name="firstName" placeholder="First name" ng-model="model.firstName" first-responder required>
+			    <p ng-show="userForm.firstName.$touched && userForm.firstName.$invalid" class="help-block pull-right">First name is required.</p>
+			  </div>
+			  <div class="form-group" ng-class="{'has-error':userForm.last_name.$touched && userForm.last_name.$invalid}">
+			    <label class="control-label" for="last_name">Last name</label>
+			    <input type="text" class="form-control" name="last_name" placeholder="Last name" ng-model="model.last_name" required>
+			    <p ng-show="userForm.last_name.$touched && userForm.last_name.$invalid" class="help-block pull-right">Last name is required.</p>
+			  </div>
+			  <div class="form-group" ng-class="{'has-error':userForm.emailAddress.$touched && userForm.emailAddress.$invalid}">
+			    <label class="control-label" for="emailAddress">Email</label>
+			    <input type="email" class="form-control" name="emailAddress" placeholder="Email" ng-model="model.emailAddress" required>
+			    <p ng-show="userForm.emailAddress.$touched && userForm.emailAddress.$error.required" class="help-block pull-right">Email address is required.</p>
+			    <p ng-show="userForm.emailAddress.$touched && userForm.emailAddress.$error.email" class="help-block pull-right">Email address is invalid.</p>
+			  </div>
+			  <div class="form-group" ng-class="{'has-error':userForm.dob.$touched && userForm.dob.$invalid}">
+			    <label class="control-label" for="exampleInputFile">Date of Birth</label>
+				<p class="input-group">
+	              <input name="dob" type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="model.dob" is-open="datePickerOpened" datepicker-options="dateOptions" ng-required="true" close-text="Close" readonly required/>
+	              <span class="input-group-btn">
+	                <button name="buttonOpenDate" type="button" class="btn btn-default" ng-click="openDatePicker($event)"><i class="glyphicon glyphicon-calendar" ></i></button>
+	              </span>
+	            </p>
+	            <p ng-show="userForm.dob.$touched && userForm.dob.$invalid" class="help-block pull-right">Date of birth is required.</p>
+			  </div>
+			  <div class="checkbox">
+			    <label>
+			      <input name="subscribed" ng-model="model.subscribed" type="checkbox" ng-model="model.subscribed"> Subscribed
+			    </label>
+			  </div><br>
+			  <button type="button" class="btn btn-default" ng-click="loadData()" name="loadButton">Load Data from JSON</button>
+			  <button name="submitButton" type="submit" class="btn btn-default btn-primary pull-right" ng-disabled="userForm.$invalid">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
