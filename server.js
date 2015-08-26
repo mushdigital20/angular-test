@@ -2,7 +2,7 @@
 * @Author: Pedro Mello
 * @Date:   2015-08-26 15:24:29
 * @Last Modified by:   Pedro Mello
-* @Last Modified time: 2015-08-26 16:34:28
+* @Last Modified time: 2015-08-27 02:45:39
 */
 
 'use strict';
@@ -44,6 +44,6 @@ if(env === 'dev')
 	app.use(webpackMiddleWare(compiler,{}));
 }
 
-app.listen(port,host,function(){
+app.listen(port,function(){
 	console.log('Server started on port:'+port);
 });
