@@ -1,8 +1,8 @@
 /* 
 * @Author: Pedro Mello
 * @Date:   2015-08-26 14:45:00
-* @Last Modified by:   pedromello
-* @Last Modified time: 2015-08-26 23:38:22
+* @Last Modified by:   Pedro Mello
+* @Last Modified time: 2015-08-27 02:27:56
 */
 'use strict';
 
@@ -10,7 +10,8 @@ require('bootstrap-webpack');
 require('angular');
 require('angular-route');
 require('angular-ui-bootstrap');
-require('!style!css!less!./assets/css/application.css.less');
+//require('!style!css!less!./assets/css/application.css.less');
+require("./assets/css/application.css.less");
 
 var app = angular.module('app',['ngRoute','ui.bootstrap','util.directives']);
 
