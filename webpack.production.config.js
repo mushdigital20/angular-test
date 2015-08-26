@@ -1,8 +1,8 @@
 /* 
 * @Author: pedromello
 * @Date:   2015-08-27 01:50:35
-* @Last Modified by:   pedromello
-* @Last Modified time: 2015-08-27 01:50:53
+* @Last Modified by:   Pedro Mello
+* @Last Modified time: 2015-08-27 02:42:17
 */
 
 'use strict';
@@ -11,7 +11,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: [
-        "bootstrap-webpack!./app/config/bootstrap.config.js",
+        //"bootstrap-webpack!./app/config/bootstrap.config.js",
         "./app/app.js"
     ],
     output: {

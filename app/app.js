@@ -2,7 +2,7 @@
 * @Author: Pedro Mello
 * @Date:   2015-08-26 14:45:00
 * @Last Modified by:   Pedro Mello
-* @Last Modified time: 2015-08-27 02:27:56
+* @Last Modified time: 2015-08-27 02:39:09
 */
 'use strict';
 
@@ -20,8 +20,8 @@ var configs = require.context('./assets/js/config', true, /.js$/);
 configs.keys().forEach(configs);
 
 //Services
-var services = require.context('./assets/js/services', true, /.js$/);
-services.keys().forEach(services);
+//var services = require.context('./assets/js/services', true, /.js$/);
+//services.keys().forEach(services);
 
 //Directives
 var directives = require.context('./assets/js/directives', true, /.js$/);
